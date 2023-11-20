@@ -1,38 +1,359 @@
-.App {
+/*HOME*/
+/*----------------------------------------------------------------------------------------------*/
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  padding: 5%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 25px 25px rgba(193, 0, 211, 0.6);
+  border-radius: 10px;
+  justify-items: center;
+  text-align: center;
+  
+}
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.user-box {
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.login-box .user-box label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:active ~ label{
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+
+.login-box form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+}
+
+.login-box a:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 100px #03e9f4;
+}
+
+.login-box a span {
+  position: absolute;
+  display: block;
+}
+
+.login-box a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.login-box a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
 }
 
-@keyframes App-logo-spin {
+.login-box a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.login-box a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: rgb(38, 167, 218);
+  text-align: center;
+}
+
+a:hover{
+  text-decoration: underline;  
+  text-decoration-color: #00FF31;
+  
+}
+
+h1 {
+  text-align: center;
+  top: 10%;
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  padding: 5%;
+  transform: translate(-50%, -50%);
+  animation: neonAnim1 2s alternate-reverse infinite;
+  color: #FF00F3;
+  font-family: Consolas;
+  font-size: 200%;
+}
+
+h2 {
+  animation: neonAnim2 2s alternate-reverse infinite;
+  color: #00FF31;
+  font-family: Consolas;
+  font-size: 200%;
+  letter-spacing: 10px;
+}
+
+h3 {
+  /*align-items: center;*/
+  text-align: center;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+}
+
+h4 {
+  /*align-items: center;*/
+  text-align: center;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes neonAnim1 {
   from {
-    transform: rotate(0deg);
+      text-shadow:
+        0 0 25px rgba(255, 0, 243, .7),
+        0 0 55px rgba(255, 0, 243, .7),
+        0 0 115px rgba(255, 0, 243, .7);
+    }
+    to {
+      text-shadow:
+        0 0 20px rgba(255, 0, 243, .7),
+        0 0 35px rgba(255, 0, 243, .7),
+        0 0 75px rgba(255, 0, 243, .7);
+    }
+}
+
+@keyframes neonAnim2 {
+  from {
+    text-shadow:
+      0 0 40px rgba(0, 255, 49, .7),
+      0 0 70px rgba(0, 255, 49, .7),
+      0 0 130px rgba(0, 255, 49, .7);
   }
   to {
-    transform: rotate(360deg);
+    text-shadow:
+      0 0 35px rgba(0, 255, 49, .7),
+      0 0 50px rgba(0, 255, 49, .7),
+      0 0 90px rgba(0, 255, 49, .7);
   }
+}
+
+body {
+    background: rgb(0, 0, 0);
+}
+
+/*--------------------------------NAV---------------------------------------*/
+/*----------------------------------------------------------------------------------------------*/
+
+nav {
+  position: absolute;
+  top: 1%;
+  right: 10%;
+}
+
+ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+ul li {
+  margin: .5rem;
+  padding: 10;
+  text-indent: 0;
+  list-style-type: none;
+  color: white
+}
+
+/* INIT */
+/* ----------------------------------------------------------------------*/
+
+.flip-container {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  margin:0 auto;
+}
+
+.card {
+  position: relative;
+  top: 50%;
+  left: -90%;
+  display:inline-block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+}
+
+.card h5, card p {
+  display:block; 
+} 
+
+.card p, .card button { 
+  color:#FFF; 
+}
+
+/* GIRA HORIZONTAL */
+.flip-container:hover .card {
+  transform: rotateY(180deg);
+}
+
+
+/* GIRA VERTICAL 
+.flip-container:hover .card {
+  transform: rotateX(180deg);
+}
+*/
+
+
+.frente, .dorso {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.frente {
+  background-color: #dd5599;
+  color: #fff;
+  display: flex;
+}
+
+.dorso {
+  background-color: #6ed3ab;
+  color: #faebd7;
+  /*transform: rotateX(180deg);*/
+  transform: rotateY(180deg);
+  text-align:center;
+}
+
+.dorso p {
+  font-size:0.65em;
+}
+
+.dorso button { 
+  display:block; 
+  width:60%; 
+  margin:2rem auto 0; 
+  border:2px solid #fff;
+  background:transparent;
+  padding:1em;
+  text-transform:uppercase;
+}
+
+.dorso button:hover {
+  color:#5f127c;
+  border-color:#5f127c;
+  font-weight:bold;
 }
